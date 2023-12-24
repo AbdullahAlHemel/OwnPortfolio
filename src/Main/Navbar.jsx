@@ -5,8 +5,8 @@ const Navbar = () => {
     const navLinks =
     <> 
        <Link to='/'><li className='border bg-gray-400 text-white uppercase font-bold  rounded-lg mr-4'><a>home</a></li></Link>
-       <Link to='/about'><li className='border bg-gray-400 text-white uppercase font-bold   rounded-lg mr-4'><a>About</a></li></Link>
-       <Link to='/resume'><li className='border bg-gray-400 text-white uppercase font-bold  rounded-lg mr-4'><a>resume</a></li></Link>
+       <Link to='/skills'><li className='border bg-gray-400 text-white uppercase font-bold   rounded-lg mr-4'><a>Skills</a></li></Link>
+       {/* <Link to='/resume'><li className='border bg-gray-400 text-white uppercase font-bold  rounded-lg mr-4'><a>resume</a></li></Link> */}
        <Link to='/contract'><li className='border bg-gray-400 text-white uppercase font-bold   rounded-lg mr-4'><a>Contract</a></li></Link>
    </>
     return (

@@ -4,6 +4,8 @@ import {
 import Main from "../Main/Main";
 import ErrorPage from "../Main/ErrorPage";
 import Home from "../Home/Home/Home";
+import Contract from "../components/Contract/Contract";
+import WhatIDo from "../Home/Home/WhatIDO/WhatIDo";
 
 export const router = createBrowserRouter([
     {
@@ -15,6 +17,14 @@ export const router = createBrowserRouter([
           path:'/',
           element:<Home></Home>
         },
+        {
+          path:'/contract',
+          element:<Contract></Contract>
+        },
+        {
+          path:'/skills',
+          element:<WhatIDo></WhatIDo>
+        }
         
       ]
     },

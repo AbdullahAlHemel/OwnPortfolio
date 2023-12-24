@@ -1,5 +1,5 @@
 import React from 'react';
-import CV from '../../../../public/Resume of Abdullah (1).pdf'
+import CV from '../../../../public/Resume of Abdullah.pdf'
 
 
 const Banner = () => {
