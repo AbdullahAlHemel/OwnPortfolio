@@ -6,7 +6,6 @@ import ErrorPage from "../Main/ErrorPage";
 import Home from "../Home/Home/Home";
 import Contract from "../components/Contract/Contract";
 import WhatIDo from "../Home/Home/WhatIDO/WhatIDo";
-import Aggregator from "../Home/Home/Agg";
 
 export const router = createBrowserRouter([
     {
@@ -19,18 +18,14 @@ export const router = createBrowserRouter([
           element:<Home></Home>
         },
         
-        // {
-        //   path:'/contract',
-        //   element:<Contract></Contract>
-        // },
+        {
+          path:'/contract',
+          element:<Contract></Contract>
+        },
 
         {
           path:'/skills',
           element:<WhatIDo></WhatIDo>
-        },
-        {
-          path:'/aggregator',
-          element:<Aggregator></Aggregator>
         }
         
       ]

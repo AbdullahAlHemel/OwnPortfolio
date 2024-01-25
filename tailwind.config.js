@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{ body:['Josefin Sans', 'sans-serif'], body2:['Source Code Pro']}
   },
   plugins: [require("daisyui")],
 }
