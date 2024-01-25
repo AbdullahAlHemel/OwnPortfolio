@@ -15,8 +15,6 @@ const Banner = () => {
       })
     return (
         <div>
-           
-             
 
             <div data-aos="zoom-in"  data-aos-duration="500">
             <div className='flex bg-[#fffaf7]'>
