@@ -1,4 +1,5 @@
 import React from 'react';
+
 import czn from '../../assets/czn.jpg'
 
 const Education = () => {

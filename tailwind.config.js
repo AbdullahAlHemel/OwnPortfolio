@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  
   theme: {
     extend: {},
     fontFamily:{ body:['Josefin Sans', 'sans-serif'], body2:['Source Code Pro']}
