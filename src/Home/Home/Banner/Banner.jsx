@@ -34,8 +34,8 @@ const Banner = () => {
                 <img src={Fp} alt="" />
             </div>
         </div>
-        </div>
-        </div>
+         </div>
+          </div>
     );
 };
 
