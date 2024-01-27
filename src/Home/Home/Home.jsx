@@ -7,14 +7,14 @@ import Education from '../../components/Edu/Education';
 
 const Home = () => {
     return (
-        <>
+        <div>
           <Banner></Banner>
           <WhatIDo></WhatIDo>
           <Projects></Projects>
           <Contract></Contract>
           <Education></Education>
           
-        </>
+        </div>
     );
 };
 
