@@ -7,7 +7,7 @@ import tools4 from '../../../../public/download (6).png'
 const WhatIDo = () => {
     return (
         <div>
-            
+
             <h2 className='uppercase text-center font-semibold text-2xl pt-12'>Skills</h2>
 
            <h2 className='text-center mt-8 text-xl border font-bold text-[#00b5ff]'>Font-End</h2>
@@ -32,6 +32,7 @@ const WhatIDo = () => {
              <img src={tools3} alt="" className='w-11 h-10'/>
              <img src={tools4} alt="" className='w-12 h-10'/>
              </div>
+
 
         </div>
 
