@@ -29,6 +29,7 @@ const WhatIDo = () => {
              <div className='flex justify-center gap-5 my-4'>
              <img src={tools1} alt="" className='w-10 h-10'/>
              <img src={tools2} alt="" className='w-12 h-10'/>
+           
              <img src={tools3} alt="" className='w-11 h-10'/>
              <img src={tools4} alt="" className='w-12 h-10'/>
              </div>
