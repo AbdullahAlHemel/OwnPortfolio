@@ -8,7 +8,6 @@ const WhatIDo = () => {
     return (
         <div>
             <h2 className='uppercase text-center font-semibold text-2xl pt-12'>Skills</h2>
-
            <h2 className='text-center mt-8 text-xl border font-bold text-[#00b5ff]'>Font-End</h2>
            <div className='grid md:grid-cols-2 p-10 gap-7'>
             <h2 className='flex'><h2 className='text-xl font-semibold w-[85px]'>JavaScript</h2><progress className="progress progress-info  w-100 h-3 mt-2.5 ml-5" value="50" max="100"></progress></h2>
