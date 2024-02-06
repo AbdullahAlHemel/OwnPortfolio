@@ -7,7 +7,6 @@ import tools4 from '../../../../public/download (6).png'
 const WhatIDo = () => {
     return (
         <div>
-
             <h2 className='uppercase text-center font-semibold text-2xl pt-12'>Skills</h2>
 
            <h2 className='text-center mt-8 text-xl border font-bold text-[#00b5ff]'>Font-End</h2>
