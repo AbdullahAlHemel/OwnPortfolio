@@ -3,7 +3,6 @@ import tools1 from '../../../../public/25231.png'
 import tools2 from '../../../../public/download (4).png'
 import tools3 from '../../../../public/download (5).png'
 import tools4 from '../../../../public/download (6).png'
-
 const WhatIDo = () => {
     return (
         <div>
