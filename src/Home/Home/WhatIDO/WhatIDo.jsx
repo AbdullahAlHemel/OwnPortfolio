@@ -30,8 +30,7 @@ const WhatIDo = () => {
              <img src={tools4} alt="" className='w-12 h-10'/>
              </div>
         </div>       
-    );
-    
+    );   
 };
 
 export default WhatIDo;
