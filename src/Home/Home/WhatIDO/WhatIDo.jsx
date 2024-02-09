@@ -31,6 +31,7 @@ const WhatIDo = () => {
              </div>
         </div>       
     );
+    
 };
 
 export default WhatIDo;
