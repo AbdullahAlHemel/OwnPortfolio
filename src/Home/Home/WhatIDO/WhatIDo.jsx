@@ -29,6 +29,7 @@ const WhatIDo = () => {
              <img src={tools3} alt="" className='w-11 h-10'/>       
              <img src={tools4} alt="" className='w-12 h-10'/>
              </div>
+             
         </div>  
     );    
 };
