@@ -11,7 +11,6 @@ const Home = () => {
           <Banner></Banner>
           <WhatIDo></WhatIDo>
           
-          
           <Projects></Projects>          
           <Contract></Contract>
           <Education></Education>
