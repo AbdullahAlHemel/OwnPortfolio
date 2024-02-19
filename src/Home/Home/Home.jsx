@@ -12,9 +12,6 @@ const Home = () => {
           <WhatIDo></WhatIDo>                  
           <Projects></Projects>          
           <Contract></Contract>
-
-
-
           <Education></Education>
           
         </div>
