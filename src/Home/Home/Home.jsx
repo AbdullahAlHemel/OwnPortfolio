@@ -14,12 +14,7 @@ const Home = () => {
           <Contract></Contract>
           <Education></Education>
 
-          
 
-
-
-
-          
         </div>
     );
 };
