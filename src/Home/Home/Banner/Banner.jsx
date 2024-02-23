@@ -30,6 +30,9 @@ const Banner = () => {
             <img src='' alt="" />
             </div>
 
+
+
+
             <div className='p-16 pb-0'>
                 <img src={Fp} alt="" />
             </div>
