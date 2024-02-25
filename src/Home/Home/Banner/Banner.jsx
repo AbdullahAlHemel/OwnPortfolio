@@ -33,6 +33,7 @@ const Banner = () => {
 
 
 
+
             <div className='p-16 pb-0'>
                 <img src={Fp} alt="" />
             </div>
