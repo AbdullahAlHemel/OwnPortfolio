@@ -27,6 +27,7 @@ const Banner = () => {
             {/* <h2 className=''>Junior Web Developer</h2> */}
             <a className='btn btn-outline btn-secondary' href={CV} download><FaFileDownload className='text-2xl'/>Download Resume</a>
 
+
             <img src='' alt="" />
             </div>
             <div className='p-16 pb-0'>
