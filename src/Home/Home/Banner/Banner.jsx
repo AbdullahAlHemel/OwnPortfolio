@@ -28,8 +28,6 @@ const Banner = () => {
             <a className='btn btn-outline btn-secondary' href={CV} download><FaFileDownload className='text-2xl'/>Download Resume</a>
 
 
-
-
             <img src='' alt="" />
             </div>
             <div className='p-16 pb-0'>
