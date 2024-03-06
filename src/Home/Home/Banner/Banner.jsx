@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const Banner = () => {
     AOS.init();
     const [text] = useTypewriter({
-        words: ['Junior Web Developer', 'Front-end Developer'],
+        words: ['Junior Web Developer', 'Front-End Developer'],
         loop: 10,
         onLoopDone: () => console.log(`loop completed after 3 runs.`)
       })
@@ -26,9 +26,6 @@ const Banner = () => {
             </div>
             {/* <h2 className=''>Junior Web Developer</h2> */}
             <a className='btn btn-outline btn-secondary' href={CV} download><FaFileDownload className='text-2xl'/>Download Resume</a>
-
-
-
 
 
             <img src='' alt="" />
