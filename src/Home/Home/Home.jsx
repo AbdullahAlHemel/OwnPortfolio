@@ -4,6 +4,7 @@ import WhatIDo from './WhatIDO/WhatIDo';
 import Projects from '../../components/Projects/Projects';
 import Contract from '../../components/Contract/Contract';
 import Education from '../../components/Edu/Education';
+import Certification from './certification/certification';
 
 const Home = () => {
     return (
@@ -11,8 +12,9 @@ const Home = () => {
           <Banner></Banner>
           <WhatIDo></WhatIDo>                  
           <Projects></Projects>          
-          <Contract></Contract>
           <Education></Education>
+          <Certification></Certification>
+          <Contract></Contract>
 
 
         </div>
