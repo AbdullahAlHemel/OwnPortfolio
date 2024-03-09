@@ -14,9 +14,9 @@ const Banner = () => {
         onLoopDone: () => console.log(`loop completed after 3 runs.`)
       })
     return (
-        <div>
-            <div data-aos="zoom-in"  data-aos-duration="500">
-            <div className='flex bg-[#fffaf7]'>
+        <div className='bg-[#fffaf7]'>
+            <div className='max-w-7xl m-auto' data-aos="zoom-in"  data-aos-duration="500">
+            <div className='flex '>
             <div className='w-1/2  my-auto text-center'>
             <div className='App text-xl font-semibold text-cyan-600 mt-3 mb-8'>
             <h2 className='text-4xl font-bold text-amber-400 font-body'>Hi, I am Abdullah</h2>

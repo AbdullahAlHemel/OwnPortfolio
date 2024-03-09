@@ -18,7 +18,7 @@ import 'aos/dist/aos.css';
 const WhatIDo = () => {
     AOS.init({duration:1000})
     return (
-        <div>
+        <div className='max-w-7xl m-auto'>
             <h2 className='uppercase text-center font-semibold text-2xl pt-12 font-body2 text-lime-700'>Skills</h2>
 
          {/* Front-end */}

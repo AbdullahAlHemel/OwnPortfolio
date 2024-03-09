@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 const Education = () => {
     AOS.init({duration:1000})
     return (
-        <div className='' >
+        <div className='max-w-7xl m-auto' >
             <h2 className='text-center mt-10  text-2xl font-bold text-rose-500 font-body2'>Education</h2>
           <div className='flex  p-10'>
           <div className='w-4/5 float-left'  data-aos="fade-up"  data-aos-duration="2000"> <a href="https://www.du.ac.bd/"><img className='w-3/5 m-auto rounded-md shadow-xl' src={czn} alt="" /></a> </div> 
