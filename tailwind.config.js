@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {},
     fontFamily:{ body:['Josefin Sans', 'sans-serif'], body2:['Source Code Pro'],
-                 body3:[ "Oswald" ], body4:[ "Arvo" ],
+                 body3:[ "Oswald" ], body4:[ "Arvo" ],Headline:[ "Cabin" ]
                }
   },
   plugins: [require("daisyui")],

@@ -19,13 +19,13 @@ const Banner = () => {
             <div className='flex '>
             <div className='w-1/2  my-auto text-center'>
             <div className='App text-xl font-semibold text-cyan-600 mt-3 mb-8'>
-            <h2 className='text-4xl font-bold text-amber-400 font-body'>Hi, I am Abdullah</h2>
+            <h2 className='text-4xl font-bold text-amber-400 font-body text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Hi, I am Abdullah</h2>
             <span className='font-body2'>{text}</span>
       <Cursor cursorColor='blue' />
                      
             </div>
             {/* <h2 className=''>Junior Web Developer</h2> */}
-            <a className='btn btn-outline btn-secondary' href={CV} download><FaFileDownload className='text-2xl'/>Download Resume</a>
+            <a className='btn btn-outline btn-secondary duration-500' href={CV} download><FaFileDownload className='text-2xl'/>Download Resume</a>
 
 
             <img src='' alt="" />
