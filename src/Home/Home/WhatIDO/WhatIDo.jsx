@@ -60,7 +60,7 @@ const WhatIDo = () => {
              </div>
      </div>
 
-x
+
      {/* Tools */}
      <div className='text-center mt-8 text-xl mx-[570px] pb-1.5 border-slate-400 border-b-2 rounded-md font-bold text-zinc-700 font-body3'>Tools</div>
 

@@ -8,7 +8,7 @@ const Certification = () => {
     AOS.init({duration:1000})
     return (<>
             <h2 className=' text-center font-body2 font-bold text-2xl mt-4'>Certification</h2>
-        <div className='flex max-w-6xl m-auto py-8 gap-20'>
+        <div className='flex max-w-6xl m-auto py-8 gap-20 mb-5'>
             <div  data-aos="zoom-in-right"  className='float-right w-1/2 text-center my-auto font-body3'>
             <h2 className='text-2xl'>Complete web Development Course</h2>
             <h2 className='text-2xl font-body4 border-b border-[1px] w-80 m-auto my-2'></h2>
