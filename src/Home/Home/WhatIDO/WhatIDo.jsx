@@ -60,7 +60,6 @@ const WhatIDo = () => {
              </div>
      </div>
 
-
      {/* Tools */}
      <div className='text-center mt-8 text-xl mx-[600px] pb-1.5 border-orange-200 border-b-2 rounded-md font-medium font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up"  data-aos-duration="500">Tools</div>
 
