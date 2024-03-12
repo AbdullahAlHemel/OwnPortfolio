@@ -15,7 +15,7 @@ import VsCode from '../../../../public/Tools/vsCode.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const WhatIDo = () => {
+const Skills = () => {
     AOS.init({duration:1000})
     return (
         <div data-aos="fade-up" className='max-w-7xl m-auto'>
@@ -82,4 +82,4 @@ const WhatIDo = () => {
     );    
 };
 
-export default WhatIDo;
+export default Skills;

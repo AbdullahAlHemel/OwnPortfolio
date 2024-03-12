@@ -5,7 +5,10 @@ import Main from "../Main/Main";
 import ErrorPage from "../Main/ErrorPage";
 import Home from "../Home/Home/Home";
 import Contract from "../components/Contract/Contract";
-import WhatIDo from "../Home/Home/WhatIDO/WhatIDo";
+import WhatIDo from "../Home/Home/WhatIDO/Skills";
+import Skills from "../Home/Home/WhatIDO/Skills";
+import Projects from "../components/Projects/Projects";
+import Education from "../components/Edu/Education";
 
 export const router = createBrowserRouter([
     {
@@ -17,15 +20,24 @@ export const router = createBrowserRouter([
           path:'/',
           element:<Home></Home>
         },
+
+        {
+          path:'/skill',
+          element:<Skills></Skills>
+        },
         
         {
-          path:'/contract',
-          element:<Contract></Contract>
+          path:'/project',
+          element:<Projects></Projects>
         },
 
         {
-          path:'/skills',
-          element:<WhatIDo></WhatIDo>
+          path:'/Education',
+          element:<Education></Education>
+        },
+        {
+          path:'/contract',
+          element:<Contract></Contract>
         }
         
       ]
