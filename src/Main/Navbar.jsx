@@ -72,7 +72,8 @@ const Navbar = () => {
             <a className='text-xl font-semibold btn bg-transparent border-sky-400 p-1.25 border rounded' href="https://www.linkedin.com/in/abdullah-al-hemel-1th/">Let's talk</a>
         </div>
         </div>
-       
+   
+   
     );
 };
 
