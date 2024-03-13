@@ -18,7 +18,7 @@ import 'aos/dist/aos.css';
 const Skills = () => {
     AOS.init({duration:1000})
     return (
-        <div data-aos="fade-up" className='max-w-7xl m-auto'>
+        <div id='skill' data-aos="fade-up" className='max-w-7xl m-auto mb-10'>
             <h2 className='uppercase text-center font-black text-2xl pt-12 font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up">Skills</h2>
 
          {/* Front-end */}

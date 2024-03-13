@@ -4,7 +4,7 @@ import WhatIDo from './WhatIDO/Skills';
 import Projects from '../../components/Projects/Projects';
 import Contract from '../../components/Contract/Contract';
 import Education from '../../components/Edu/Education';
-import Certification from './certification/certification';
+// import Certification from './certification/certification';
 
 const Home = () => {
     return (
@@ -13,7 +13,7 @@ const Home = () => {
           <WhatIDo></WhatIDo>                  
           <Projects></Projects>          
           <Education></Education>
-          <Certification></Certification>
+          
           <Contract></Contract>
 
 

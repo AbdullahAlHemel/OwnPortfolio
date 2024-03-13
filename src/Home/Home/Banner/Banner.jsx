@@ -18,8 +18,8 @@ const Banner = () => {
             <div className='max-w-7xl m-auto' data-aos="zoom-in"  data-aos-duration="500">
             <div className='flex '>
             <div className='w-1/2  my-auto text-center'>
-            <div className='App text-xl font-semibold text-cyan-600 mt-3 mb-8'>
-            <h2 className='text-4xl font-bold text-amber-400 font-body text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Hi, I am Abdullah</h2>
+            <div className='App text-xl font-semibold text-cyan-600 mb-8'>
+            <h2 className='text-4xl font-bold  font-body text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Hi, I am Abdullah</h2>
             <span className='font-body2'>{text}</span>
       <Cursor cursorColor='blue' />
                      
@@ -30,7 +30,7 @@ const Banner = () => {
 
             <img src='' alt="" />
             </div>
-            <div className='p-16 pb-0'>
+            <div className='p-16 pt-8 pb-0'>
                 <img src={Fp} alt="" />
             </div>
         </div>

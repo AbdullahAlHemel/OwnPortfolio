@@ -7,9 +7,8 @@ import 'aos/dist/aos.css';
 
 const Projects = () => {
     AOS.init({duration:1000})
-    return (<div data-aos="fade-up" className='bg-slate-100 py-1 my-8 pb-10'>
+    return (<div data-aos="fade-up" className='bg-slate-100 py-1 pb-10'>
             <h2 className=' text-center text-2xl mt-11 font-black pb-5 uppercase font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Best Projects</h2>
-       
        
         <div className='my-6 max-w-4xl m-auto md:flex '>
             <div data-aos="fade-right"  className='bg-white p-8 hover:scale-105 duration-300 flex border-y-2 border-r-2 rounded-r-xl'>
@@ -73,7 +72,6 @@ const Projects = () => {
                 </div>
             </div> */}
             <div>
-            <div></div>
         </div>   
      </div>
 

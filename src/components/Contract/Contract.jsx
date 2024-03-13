@@ -51,7 +51,7 @@ const Contract = () => {
     };
 
     return (<>
-    <div className="bg-teal-100 py-10">
+    <div className="bg-teal-100 py-10 ">
     <h2 className=' mt-5 text-center font-body2 font-bold text-2xl my-2 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>{text}<Cursor cursorColor='blue' /></h2>
       <div className='flex m-auto gap-14 py-4 w-[610px] '>
           <a data-aos="fade-left" href="https://www.linkedin.com/in/abdullah-al-hemel-1th/" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-7xl text-[#0077b5]'><FaLinkedin /></a>
@@ -62,7 +62,7 @@ const Contract = () => {
       </div>
     </div>
                 {/* <h2 className=' text-center font-body2 font-bold text-2xl my-8'>Contract</h2> */}
-        <div class=" mt-16 flex flex-col max-w-5xl m-auto lg:flex-row my-5 gap-1">
+        <div class="mb-10 mt-16 flex flex-col max-w-5xl m-auto lg:flex-row my-5 gap-1">
           <ToastContainer position="top-left" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
 
   <form  data-aos="fade-up" data-aos-duration="2000" ref={form} onSubmit={sendEmail} class="w-1/2  bg-base-300 rounded-box p-14">
