@@ -17,20 +17,18 @@ const Banner = () => {
         <div className='bg-[#fffaf7]'>
             <div className='max-w-7xl m-auto' data-aos="zoom-in"  data-aos-duration="500">
             <div className='flex '>
+
             <div className='w-1/2  my-auto text-center'>
-            <div className='App text-xl font-semibold text-cyan-600 mb-8'>
-            <h2 className='text-4xl font-bold  font-body text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Hi, I am Abdullah</h2>
+            <div className='App md:text-xl font-semibold text-cyan-600 md:mb-8 mb-3'>
+            <h2 className='md:text-4xl text-xl font-bold  font-body text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Hi, I am Abdullah</h2>
             <span className='font-body2'>{text}</span>
-      <Cursor cursorColor='blue' />
-                     
+            <Cursor cursorColor='blue' />               
             </div>
             {/* <h2 className=''>Junior Web Developer</h2> */}
-            <a className='btn btn-outline btn-secondary duration-500' href={CV} download><FaFileDownload className='text-2xl'/>Download Resume</a>
-
-
-            <img src='' alt="" />
+            <a className='btn lg:btn-lg btn-xs btn-outline text-center btn-secondary duration-500' href={CV} download><FaFileDownload className='md:text-2xl text-xl'/>Download Resume</a>
             </div>
-            <div className='p-16 pt-8 pb-0'>
+
+            <div className='w-1/2 md:p-16 md:pt-8 p-4 md:pb-2'>
                 <img src={Fp} alt="" />
             </div>
         </div>

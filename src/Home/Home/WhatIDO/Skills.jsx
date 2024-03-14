@@ -19,12 +19,12 @@ const Skills = () => {
     AOS.init({duration:1000})
     return (
         <div id='skill' data-aos="fade-up" className='max-w-7xl m-auto mb-10'>
-            <h2 className='uppercase text-center font-black text-2xl pt-12 font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up">Skills</h2>
+            <h2 className='uppercase text-center font-black text:md md:text-xl lg:text-2xl pt-4 lg:pt-12 font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up">Skills</h2>
 
          {/* Front-end */}
-           <div className='text-center mt-8 text-xl mx-[580px] pb-1.5 border-orange-200 border-b-2 rounded-md font-medium font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600 ' data-aos="fade-up">Front-End</div>
+           <div className='text-center lg:mt-8 text:md md:text-xl lg:text-xl w-[90px] m-auto lg:pb-1.5 border-orange-200 border-b-2 rounded-md font-medium font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600 ' data-aos="fade-up">Front-End</div>
 
-         <div className='mx-auto w-[700px] pt-14 pb-5 grid grid-cols-5 '>
+         <div className='mx-auto md:w-[550px] w-[300px] lg:w-[700px] pt-4 md:pt-8 lg:pt-14 pb-5 grid grid-cols-5 '>
 
            <div  style={{transition:'0.5s'}} data-aos="flip-left"  className='hover:border-pink-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 pt-8 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-blue-300 hover:shadow-xl '><div className=''><img  className='' src={SkillIconTailwind} alt="" /></div></div> 
            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-pink-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-orange-300 hover:shadow-xl duration-500'><div className=''><img className='' src={SkillIconJava} alt="" /></div></div> 
@@ -32,8 +32,8 @@ const Skills = () => {
            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-red-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-sky-300 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconCss} alt="" /></div></div> 
            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-sky-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-orange-300 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconHtml} alt="" /></div></div> 
 
-            <div className='mx-auto w-[700px] grid grid-cols-5 mt-1.5  font-medium font-body3 tracking-[.03em]'>
-                <div className='w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Tailwind</h3></div> 
+            <div className='mx-auto md:w-[550px] w-[300px] lg:w-[700px] grid grid-cols-5 mt-1.5  font-medium font-body3 tracking-[.03em]'>
+                <div className='lg:w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Tailwind</h3></div> 
                 <div className=' w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>JavaScript</h3></div> 
                 <div className='w-[70px] mx-auto font-medium'><h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>React</h3></div> 
                 <div className='w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>CSS</h3></div> 

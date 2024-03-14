@@ -52,7 +52,7 @@ const Navbar = () => {
    ]
 
     return (
-        <div data-aos="fade-down" className='bg-[#fffaf7] border-b-[0.25px] border-gray-200'>
+        <div data-aos="fade-down" className=' bg-[#fffaf7] border-b-[0.25px] border-gray-200'>
         <div className="navbar z-20 bg-opacity-30  px-9 gap-20">
         <div class="navbar-start lg:inline hidden">
             <h2 className='text-4xl p-1.5 rounded'><FaCode /></h2>
