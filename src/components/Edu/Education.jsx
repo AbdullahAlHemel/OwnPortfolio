@@ -12,9 +12,9 @@ const Education = () => {
         
         <div data-aos="fade-up" className='max-w-7xl m-auto' >
             <h2 className='text-center mt-10 text-2xl uppercase font-black font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Education</h2>
-          <div className='flex lg:p-8'>
-          <div className='w-4/5 float-left'  data-aos="fade-up"  data-aos-duration="2000"> <a href="https://www.du.ac.bd/"><img className='w-3/5 m-auto rounded-md shadow-xl md:mt-10 lg:mt-0' src={czn} alt="" /></a> </div> 
-           <div className='w-4/5 float-right text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-violet-500'  data-aos="zoom-in-left">
+          <div className='flex lg:p-8 p-2 md:flex-row flex-col max-w-6xl m-auto '>
+          <div className='w-full md:w-4/5 float-left'  data-aos="fade-up"  data-aos-duration="2000"> <a href="https://www.du.ac.bd/"><img className='w-3/5 m-auto rounded-md shadow-xl md:mt-10 lg:mt-0' src={czn} alt="" /></a> </div> 
+           <div className='w-full md:w-4/5 float-right text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-violet-500'  data-aos="zoom-in-left">
             <p className='text-xl text-center py-8 mx-5'>
                 <h2 className='text-2xl font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-700 to-violet-600 '>University of Dhaka</h2>
                 <h2 className=' border-b border-[1px] w-60 m-auto my-1'></h2>
@@ -24,7 +24,6 @@ const Education = () => {
                 </p>
                 </div>
            </div>
-           
         </div>
 
         <Certification></Certification>

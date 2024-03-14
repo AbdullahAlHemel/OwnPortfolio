@@ -57,7 +57,7 @@ const Navbar = () => {
         <div class="navbar-start lg:inline hidden">
             <h2 className='text-4xl p-1.5 rounded'><FaCode /></h2>
         </div>
-        <div className="navbar-center lg:flex float-right">
+        <div className="navbar-center max-w-4xl m-auto float-right">
             <ul className= {`menu menu-horizontal px-1 gap-1 `}>
                 {/* {navLinks} */}
                 {data.map((item, key)=> (

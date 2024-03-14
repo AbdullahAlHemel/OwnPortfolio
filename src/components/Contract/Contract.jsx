@@ -51,7 +51,7 @@ const Contract = () => {
     };
 
     return (<>
-    <div className="bg-teal-100 py-4 md:py-6 lg:py-10 ">
+    <div className="bg-teal-100 py-7 md:py-8 lg:py-10 ">
     <h2 className='mt-2 lg:mt-5 text-center font-body2 font-bold md:text-xl lg:text-2xl my-2 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>{text}<Cursor cursorColor='blue' /></h2>
       <div className='flex m-auto lg:gap-14 mg:gap-10 gap-4 py-2 lg:py-4 w-[300px] md:w-[450px] lg:w-[610px] '>
           <a data-aos="fade-left" href="https://www.linkedin.com/in/abdullah-al-hemel-1th/" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-4xl md:text-6xl lg:text-7xl text-[#0077b5]'><FaLinkedin /></a>
@@ -62,10 +62,10 @@ const Contract = () => {
       </div>
     </div>
                 {/* <h2 className=' text-center font-body2 font-bold text-2xl my-8'>Contract</h2> */}
-        <div class="mb-10  md:mt-6 mt-1 lg:mt-16 flex flex-col max-w-5xl m-auto lg:flex-row my-5 gap-1">
+        <div class="mb-3 lg:mb-10 md:mt-6 mt-1 lg:mt-16 flex flex-col max-w-5xl m-auto lg:flex-row my-5 gap-1">
           <ToastContainer position="top-left" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
 
-  <form  data-aos="fade-up" data-aos-duration="2000" ref={form} onSubmit={sendEmail} class="lg:w-1/2  bg-base-300 rounded-box p-8 md:p-10 lg:p-14">
+  <form  data-aos="fade-up" data-aos-duration="2000" ref={form} onSubmit={sendEmail} class="lg:w-1/2  bg-base-300 rounded-box m-6 md:m-0 p-8 md:p-10 lg:p-14">
     <h2 className='text-2xl md:text-3xl lg:text-5xl font-body3 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600'>Let's Work </h2>
     <h2 className='text-2xl md:text-3xl lg:text-5xl font-body3 font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-violet-500 lg:pb-2'>together!</h2>
     <p className='text-md md:text-xl py-5  text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-violet-600  '>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
