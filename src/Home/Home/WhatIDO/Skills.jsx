@@ -26,6 +26,7 @@ const Skills = () => {
 
          <div className='mx-auto w-[700px] pt-4 md:pt-8 lg:pt-14 pb-5 grid grid-cols-5 '>
 
+
            <div  style={{transition:'0.5s'}} data-aos="flip-left"  className='hover:border-pink-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 pt-8 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-blue-300 hover:shadow-xl '><div className=''><img  className='' src={SkillIconTailwind} alt="" /></div></div> 
            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-pink-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-orange-300 hover:shadow-xl duration-500'><div className=''><img className='' src={SkillIconJava} alt="" /></div></div> 
            <div style={{transition:'1s'}} data-aos="flip-left" className='border-cyan-300 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg shadow-cyan-300 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconReact} alt="" /></div></div> 
