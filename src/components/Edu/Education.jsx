@@ -18,13 +18,16 @@ const floatY = { animate: { y: [0, -8, 0], transition: { repeat: Infinity, durat
 
 const Education = () => {
   return (
-    <section className="relative w-full overflow-hidden text-white py-24 px-4 sm:px-6 md:px-12">
+    <section 
+    
+     className="relative w-full overflow-hidden text-white py-24 px-4 sm:px-6 md:px-12">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${EduBg})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-blue-900/40 to-black/90 backdrop-blur-sm" />
+      <div
+       className="absolute inset-0 bg-gradient-to-br from-black/90 via-blue-900/40 to-black/90 backdrop-blur-sm" />
 
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Section Title */}
@@ -33,20 +36,25 @@ const Education = () => {
             variants={sectionFade}
             initial="hidden"
             animate="show"
-            className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide mb-12 sm:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-300 drop-shadow-2xl"
+            className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-wide mb-12 sm:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-300 drop-shadow-2xl"
           >
             Education
           </motion.h2>
         </GradientText>
 
         {/* University Card */}
+        <div
+         data-aos="fade-up"
+         data-aos-anchor-placement="bottom"
+        >
         <motion.div
+        
           variants={cardFade}
           initial="hidden"
           animate="show"
           whileHover={{ scale: 1.015 }}
           className="flex flex-col md:flex-row bg-white/10 backdrop-blur-2xl rounded-3xl shadow-[0_0_60px_rgba(0,150,255,0.3)] border border-blue-500/20 p-6 sm:p-10 mb-12"
-        >
+         >
           {/* University Image */}
           <motion.div variants={slideLeft} initial="hidden" animate="show" className="md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
             <motion.a whileHover={{ scale: 1.07 }} href="https://www.du.ac.bd/">
@@ -70,7 +78,7 @@ const Education = () => {
             <p className="mt-2 text-lg sm:text-xl text-blue-100 font-medium">2023 – Present</p>
           </motion.div>
         </motion.div>
-
+        </div>
         {/* Certification Title */}
         <motion.h2
           variants={sectionFade}
@@ -80,7 +88,10 @@ const Education = () => {
         >
           Certification
         </motion.h2>
-
+         <div
+         data-aos="fade-up"
+         data-aos-anchor-placement="bottom"
+        >
         {/* Certificate Card */}
         <motion.div
           variants={cardFade}
@@ -124,6 +135,7 @@ const Education = () => {
             />
           </motion.div>
         </motion.div>
+        </div>
       </div>
     </section>
   );

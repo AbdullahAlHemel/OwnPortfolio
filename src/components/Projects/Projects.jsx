@@ -6,32 +6,55 @@ import img3 from '../../assets/project/Capture13.png';
 import bg from '../../assets/Web_Photo_Editor.jpg';
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import GradientText from '../../Home/Home/Banner/GradientText';
+import { motion } from "framer-motion";
+
 
 const Projects = () => {
+    const iconVariants = {
+      float: {
+        y: [0, -5, 0],
+        transition: {
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+      },
+      glow: {
+        boxShadow: [
+          "0 0 0px rgba(0,123,255,0)",
+          "0 0 18px rgba(0,123,255,0.85)",
+          "0 0 0px rgba(0,123,255,0)",
+        ],
+        transition: {
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+      },
+    };
+
+
   const projects = [
     { 
       id: 1, 
       img: img1, 
-      title: "Project One",
-      link: "https://your-live-link-1.com",
-      github: "https://github.com/username/project-one",
-      live: "https://project-one-live.com",
+      title: "Restaurants web",
+      link: "https://bistro-boss-1955d.web.app/",
+      github: "https://github.com/AbdullahAlHemel/Bistro-boss-client-2",
     },
     { 
       id: 2, 
       img: img2, 
-      title: "Project Two",
-      link: "https://your-live-link-2.com",
-      github: "https://github.com/username/project-one",
-      live: "https://project-one-live.com",
+      title: "News Blog",
+      link: "https://assignment-11-3127e.web.app/",
+      github: "https://github.com/AbdullahAlHemel/blog-client",
     },
     { 
       id: 3, 
       img: img3, 
-      title: "Project Three",
-      link: "https://your-live-link-3.com",
-      github: "https://github.com/username/project-one",
-      live: "https://project-one-live.com",
+      title: "Percel Order",
+      link: "https://zap-shift-100.web.app/",
+      github: "https://github.com/AbdullahAlHemel/zap-shift",
     },
   ];
 
@@ -75,27 +98,40 @@ const Projects = () => {
               </div>
 
               <div className="p-4 flex flex-col flex-grow justify-between">
-                <div className="flex justify-center gap-6 mt-auto">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-gray-400 transition-colors"
-                    title="View Code"
-                  >
-                    <FaGithub size={36} />
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-gray-400 transition-colors"
-                    title="View Live"
-                  >
-                    <FaExternalLinkAlt size={36} />
-                  </a>
-                </div>
+              <div className="flex justify-center gap-6 mt-auto">
+
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-black p-1 rounded-lg"
+                  title="View Code"
+                  variants={iconVariants}
+                  animate={["float", "glow"]}
+                  whileHover={{ scale: 1.25, rotate: 8 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaGithub size={32} />
+                </motion.a>
+
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-black p-1 rounded-lg"
+                  title="View Live"
+                  variants={iconVariants}
+                  animate={["float", "glow"]}
+                  whileHover={{ scale: 1.25, rotate: -8 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaExternalLinkAlt size={32} />
+                </motion.a>
+
               </div>
+            </div>
+
+
             </a>
           ))}
         </div>

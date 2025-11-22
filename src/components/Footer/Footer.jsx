@@ -21,7 +21,7 @@ const Footer = () => {
         </Link>
 
         <a
-          href="https://www.linkedin.com/in/abdullah-al-hemel-1th/"
+          href="https://www.linkedin.com/in/abdullah-al-hemel-845583340/"
           target="_blank"
           rel="noreferrer"
           className="flex flex-col items-center group transition transform hover:scale-110"

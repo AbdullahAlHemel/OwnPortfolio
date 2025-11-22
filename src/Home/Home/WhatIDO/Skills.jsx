@@ -28,7 +28,8 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div data-aos="fade-up" 
+    <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" 
      className="max-w-7xl m-auto overflow-hidden py-16 mt-3" style={{ 
       background: 'linear-gradient(to right, #1A1A2E, #16213E, #0F3460, #533483)' 
     }}>

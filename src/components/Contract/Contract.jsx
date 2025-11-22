@@ -56,7 +56,7 @@ const Contract = () => {
   };
 
   const socialLinks = [
-    { href: "https://www.linkedin.com/in/abdullah-al-hemel-1th/", icon: <FaLinkedin />, color: "#0077b5" },
+    { href: "https://www.linkedin.com/in/abdullah-al-hemel-845583340/", icon: <FaLinkedin />, color: "#0077b5" },
     { href: "http://wa.me/+8801980076426", icon: <IoLogoWhatsapp />, color: "#128c7e" },
     { href: "https://www.facebook.com/profile.php?id=100024754232380", icon: <FaFacebookSquare />, color: "#316FF6" },
     { href: "https://github.com/AbdullahAlHemel", icon: <FaGithub />, color: "black" },
@@ -66,7 +66,7 @@ const Contract = () => {
   const contactInfo = [
     { icon: <FaPhone />, title: "Phone", content: "+880 19800 764 26" },
     { icon: <MdEmail />, title: "Email", content: "abdullahalhemel100@gmail.com" },
-    { icon: <FaMapMarkerAlt />, title: "Location", content: "Mj. Hall, University of Dhaka, 1100, Dhaka" },
+    { icon: <FaMapMarkerAlt />, title: "Location", content: "Mjb. Hall, University of Dhaka, 1100, Dhaka" },
   ];
 
   return (
@@ -155,8 +155,13 @@ const Contract = () => {
             animate={isVisible ? "show" : "hidden"}
             className="lg:w-1/2 flex flex-col justify-center gap-6 sm:gap-8"
           >
+
+
             {contactInfo.map((info, index) => (
-              <motion.div key={index} variants={cardHover} whileHover="hover" className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/10 backdrop-blur-lg p-4 sm:p-6 rounded-3xl shadow-xl border border-white/10">
+              <motion.div 
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              key={index} variants={cardHover} whileHover="hover" className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/10 backdrop-blur-lg p-4 sm:p-6 rounded-3xl shadow-xl border border-white/10">
                 <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }} className="w-12 h-12 sm:w-14 sm:h-14 p-2 sm:p-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white flex items-center justify-center">
                   {info.icon}
                 </motion.div>
