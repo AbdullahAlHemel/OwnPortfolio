@@ -4,13 +4,25 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  
   theme: {
-    extend: {},
-    fontFamily:{ body:['Josefin Sans', 'sans-serif'], body2:['Source Code Pro'],
-                 body3:[ "Oswald" ], body4:[ "Arvo" ],Headline:[ "Cabin" ]
-               }
+    extend: {
+      animation: {
+        'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
+        'star-movement-top': 'star-movement-top linear infinite alternate',
+      },
+      keyframes: {
+        'star-movement-bottom': {
+          '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+          '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
+        },
+        'star-movement-top': {
+          '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+          '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
+        },
+      },
+    },
   },
-  plugins: [require("daisyui")],
+
+  plugins: [],
 }
 

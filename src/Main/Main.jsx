@@ -1,14 +1,47 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from '../components/Footer/Footer';
-
+import Home from '../Home/Home/Home';
+import Projects from '../components/Projects/Projects';
+import Skills from '../Home/Home/WhatIDO/Skills';
+import Education from '../components/Edu/Education';
+import Contact from '../components/Contract/Contract';
+import Navbar from '../Main/Navbar'
+import Footer from '../components/Footer/Footer'
+import Round from '../Home/Round/Round';
+import Number from '../components/motion/Number';
 const Main = () => {
     return (
-        <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+        <div className="relative nunito-sans">
+            <Navbar />
+            
+            {/* Home Section */}
+            <section id="home">
+                <Home />
+            </section>
+            
+            {/* Skills Section */}
+            <section id="skills">
+                <Skills />
+                 <Round/>
+            </section>
+                
+            
+            {/* Projects Section */}
+            <section id="projects">
+                <Projects />
+            </section>
+
+              
+             <Number/>
+            {/* Education Section */}
+            <section id="education">
+                <Education />
+            </section>
+            
+            {/* Contact Section */}
+            <section id="contact">
+                <Contact />
+            </section>
+            <Footer/>
         </div>
     );
 };

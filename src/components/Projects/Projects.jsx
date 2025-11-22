@@ -1,81 +1,107 @@
 import React from 'react';
-import img1 from '../../../public/Screenshot (124).png'
-import img2 from '../../../public/Screenshot (125).png'
-import img3 from '../../../public/Screenshot (126).png'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { Parallax } from 'react-parallax';
+import img1 from '../../assets/project/Capture11.png';
+import img2 from '../../assets/project/Capture12.png';
+import img3 from '../../assets/project/Capture13.png';
+import bg from '../../assets/Web_Photo_Editor.jpg';
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import GradientText from '../../Home/Home/Banner/GradientText';
 
 const Projects = () => {
-    AOS.init({duration:1000})
-    return (<div data-aos="fade-up" className='bg-slate-100 py-1 pb-10'>
-            <h2 className=' text-center text-2xl mt-11 font-black pb-5 uppercase font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>Best Projects</h2>
-       
-        <div className='my-6 max-w-4xl m-auto md:flex '>
-            <div data-aos="fade-right"  className='bg-white p-8 hover:scale-105 duration-300 flex border-y-2 border-r-2 rounded-r-xl'>
-                <div className='w-1/2 float-left'>
-                  <a className='' href="https://assignment-11-3127e.web.app/"><img className='w-10/12' src={img1} alt="" /></a>
-                </div>
-                <div className='w-1/2 float-right my-auto'>
-                    <h2 className='text-center font-semibold text-2xl mt-3 font-body3 pb-5 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-slate-600'>News Blog Projects</h2>
-                    <div className='text-center mt-5'>
-                    <a className='w-10 h-5  p-3 mr-2 rounded-md font-body2 font-semibold border hover:shadow-xl hover:w-12  border-emerald-600' href="https://github.com/AbdullahAlHemel/blog-client">Code Link</a>
-                    <a className='w-10 h-5  p-3 mr-2 rounded-md font-body2 font-semibold border hover:shadow-xl hover:w-12  border-yellow-800' href="https://assignment-11-3127e.web.app/">Live Link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* 2nd project */}
-        <div className='my-6 max-w-4xl m-auto md:flex '>
-            <div data-aos="fade-left"  className='bg-white p-8 hover:scale-125 duration-300 flex border-y-2 border-l-2 rounded-l-xl'>
-                
-                <div className='w-1/2 float-left my-auto'>
-                    <h2 className='text-center font-semibold text-2xl mt-3 font-body3 pb-5 text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-rose-500'>Car Brand Projects</h2>
-                    <div className='text-center mt-5'>
-                    <a className='w-10 h-5  p-3 mr-2 rounded-md font-body2 font-semibold border hover:shadow-xl hover:w-12  border-emerald-600' href="https://github.com/AbdullahAlHemel/car-World">Code Link</a>
-                    <a className='w-10 h-5  p-3 mr-2 rounded-md font-body2 font-semibold border hover:shadow-xl hover:w-12  border-yellow-800' href="https://assignment-10-ae122.web.app/">Live Link</a>
-                    </div>
-                </div>
-                <div className='w-1/2 float-right'>
-                  <a className='' href="https://assignment-10-ae122.web.app/"><img className='w-10/12' src={img2} alt="" /></a>
-                </div>
-            </div>
-        </div>
-        <div className='my-6 max-w-4xl m-auto md:flex '>
-            <div data-aos="fade-right"  className='bg-white p-8 hover:scale-105 duration-300 flex border-y-2 border-r-2 rounded-r-xl'>
-                <div className='w-1/2 float-left'>
-                  <a className='' href="https://m-53-5a63b.firebaseapp.com/"><img className='w-10/12' src={img3} alt="" /></a>
-                </div>
-                <div className='w-1/2 float-right my-auto'>
-                    <h2 className='text-center font-semibold text-2xl mt-3 font-body3 pb-5 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-slate-600'>Carrier Course Projects</h2>
-                    <div className='text-center mt-5'>
-                    <a className='w-10 h-5  p-3 mr-2 rounded-md font-body2 font-semibold border hover:shadow-xl hover:w-12  border-emerald-600' href="https://github.com/AbdullahAlHemel/courseWeb">Code Link</a>
-                    <a className='w-10 h-5  p-3 mr-2 rounded-md font-body2 font-semibold border hover:shadow-xl hover:w-12  border-yellow-800' href="https://m-53-5a63b.firebaseapp.com/">Live Link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-            {/* project2 */}
-            {/* <div className='w-1/3'>
-                <img src={img2} alt="" />
-                <h2 className='text-center font-bold text-2xl mt-3'></h2>
-                <div className='text-center mt-5'>
-                <a className='btn mr-8' href="">Code Link</a>
-                <a className='btn mr-8' href="">Live Link</a>
-                </div>
-            </div>
-            <div className='w-1/3'>
-                <img src={img3} alt="" />
-                <h2 className='text-center font-bold text-2xl mt-3'>Course selling Projects</h2>
-                <div className='text-center mt-5'>
-                <a className='btn mr-8' href="https://github.com/AbdullahAlHemel/blog-client">Code Link</a>
-                <a className='btn mr-8' href="">Live Link</a>
-                </div>
-            </div> */}
-            <div>
-        </div>   
-     </div>
+  const projects = [
+    { 
+      id: 1, 
+      img: img1, 
+      title: "Project One",
+      link: "https://your-live-link-1.com",
+      github: "https://github.com/username/project-one",
+      live: "https://project-one-live.com",
+    },
+    { 
+      id: 2, 
+      img: img2, 
+      title: "Project Two",
+      link: "https://your-live-link-2.com",
+      github: "https://github.com/username/project-one",
+      live: "https://project-one-live.com",
+    },
+    { 
+      id: 3, 
+      img: img3, 
+      title: "Project Three",
+      link: "https://your-live-link-3.com",
+      github: "https://github.com/username/project-one",
+      live: "https://project-one-live.com",
+    },
+  ];
 
-    );
+  return (
+    <Parallax
+      bgImage={bg}
+      strength={400}
+      bgImageStyle={{ objectFit: 'cover',  }} // Ensures full cover and proper scaling
+    >
+      <div className="relative py-20 pb-20" >
+        {/* Overlay for gradient + readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-black opacity-80 z-0"></div>
+
+        <GradientText colors={["#dbe8ff", "#aecdff", "#ff4d4d", "#dbe8ff", "#aecdff"]} animationSpeed={6} className="relative z-10">
+          <h2 className="text-center text-4xl font-black pb-14 uppercase font-Headline">
+              Projects
+          </h2>
+        </GradientText>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-2 px-4 relative z-10">
+          {projects.map((project) => (
+            <a
+              key={project.id}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md overflow-hidden cursor-pointer bg-gradient-to-b from-[#020617] to-[#0b0f29] border-2 border-blue-500 transform transition-all duration-300 p-3 hover:scale-105 hover:z-50 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] shadow-blue-500/50 relative z-10"
+            >
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img 
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-400 "
+                />
+              </div>
+
+              {/* Title */}
+              <div className="p-4 bg-black/50 backdrop-blur-md text-center">
+                <p className="text-white text-lg font-semibold">{project.title}</p>
+              </div>
+
+              <div className="p-4 flex flex-col flex-grow justify-between">
+                <div className="flex justify-center gap-6 mt-auto">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-400 transition-colors"
+                    title="View Code"
+                  >
+                    <FaGithub size={36} />
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-400 transition-colors"
+                    title="View Live"
+                  >
+                    <FaExternalLinkAlt size={36} />
+                  </a>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </Parallax>
+  );
 };
 
 export default Projects;

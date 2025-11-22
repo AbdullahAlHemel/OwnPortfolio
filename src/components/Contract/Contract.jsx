@@ -1,91 +1,178 @@
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { FaGithub } from "react-icons/fa6";
-import { FaTelegram } from "react-icons/fa";
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { Parallax } from "react-parallax";
+
+import {
+  FaFacebookSquare,
+  FaLinkedin,
+  FaGithub,
+  FaTelegram,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+
+import ContractBg from "../../assets/contract2.jfif"; 
+import GradientText from "../../Home/Home/Banner/GradientText";
+
+// Animation Variants
+const fadeUp = { hidden: { opacity: 0, y: 60 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } };
+const slideInLeft = { hidden: { opacity: 0, x: -80 }, show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } } };
+const slideInRight = { hidden: { opacity: 0, x: 80 }, show: { opacity: 1, x: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } } };
+const scaleIn = { hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut" } } };
+const staggerContainer = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.2 } } };
+const socialIconFloat = { animate: { y: [0, -10, 0], transition: { repeat: Infinity, duration: 4, ease: "easeInOut" } } };
+const cardHover = { hover: { scale: 1.03, y: -5, transition: { type: "spring", stiffness: 300, damping: 15 } } };
 
 const Contract = () => {
+  const form = useRef();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const [text] = useTypewriter({
-    words: ['Connect With'],
-    loop: 10,
-    onLoopDone: () => console.log(`loop completed after 8 runs.`)
-  })
-  
+  useEffect(() => { AOS.init({ duration: 1200 }); }, []);
 
-  const notify = () => toast("✔️ Message Sent Successfully");
+  const [text] = useTypewriter({ words: ["Connect With"], loop: 0 });
 
-    AOS.init({duration:1000})
-    const form = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), { threshold: 0.1 });
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => { if (sectionRef.current) observer.unobserve(sectionRef.current); };
+  }, []);
 
-    const sendEmail = (e) => {
-      e.preventDefault(
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm("service_mr1gwrk", "template_e0eq6kp", form.current, "ZswIewmnJicA0QdtX")
+      .then(() => { e.target.reset(); toast.success("✔️ Message Sent Successfully"); })
+      .catch((error) => { toast.error("❌ Something went wrong!"); console.error(error.text); });
+  };
 
-      );
-    
-      emailjs
-        .sendForm('service_vzn9e18', 'template_e0eq6kp', form.current, {
-          publicKey: 'ZswIewmnJicA0QdtX',
-        })
-        .then(
-          () => {
-            e.target.reset();
-            console.log('SUCCESS!');
+  const socialLinks = [
+    { href: "https://www.linkedin.com/in/abdullah-al-hemel-1th/", icon: <FaLinkedin />, color: "#0077b5" },
+    { href: "http://wa.me/+8801980076426", icon: <IoLogoWhatsapp />, color: "#128c7e" },
+    { href: "https://www.facebook.com/profile.php?id=100024754232380", icon: <FaFacebookSquare />, color: "#316FF6" },
+    { href: "https://github.com/AbdullahAlHemel", icon: <FaGithub />, color: "black" },
+    { href: "#", icon: <FaTelegram />, color: "#0088cc" },
+  ];
+
+  const contactInfo = [
+    { icon: <FaPhone />, title: "Phone", content: "+880 19800 764 26" },
+    { icon: <MdEmail />, title: "Email", content: "abdullahalhemel100@gmail.com" },
+    { icon: <FaMapMarkerAlt />, title: "Location", content: "Mj. Hall, University of Dhaka, 1100, Dhaka" },
+  ];
+
+  return (
+    <Parallax bgImage={ContractBg} strength={400}>
+      <section ref={sectionRef} className="relative py-24 px-6 md:px-12 text-white">
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+        <ToastContainer position="top-right" autoClose={4000} theme="dark" hideProgressBar={false} />
+
+        {/* Section Title */}
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          animate={isVisible ? "show" : "hidden"}
+          className="relative z-10 text-center text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-extrabold uppercase bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 mb-12 sm:mb-16"
+        >
+          {text} <Cursor cursorColor="#0ff" />
+        </motion.h2>
+
+        {/* Social Links */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          animate={isVisible ? "show" : "hidden"}
+          className="relative z-10 flex justify-center flex-wrap gap-4 sm:gap-6 mb-12 sm:mb-20"
+        >
+          {socialLinks.map((social, i) => (
+            <motion.a
+              key={i}
+              variants={scaleIn}
+              whileHover={{ scale: 1.3, rotate: 5, transition: { type: "spring", stiffness: 400 } }}
+              whileTap={{ scale: 0.9 }}
+              href={social.href}
+              className="bg-white/90 p-3 sm:p-4 rounded-full text-3xl sm:text-5xl md:text-6xl shadow-lg backdrop-blur-sm"
+              style={{ color: social.color }}
+              {...socialIconFloat}
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </motion.div>
+
+        {/* Contact Form & Info */}
+        <div className="relative z-10 flex flex-col lg:flex-row max-w-6xl mx-auto gap-8 lg:gap-12">
+          {/* Form */}
+          <motion.form
+            ref={form}
+            onSubmit={sendEmail}
+            variants={slideInLeft}
+            initial="hidden"
+            animate={isVisible ? "show" : "hidden"}
+            className="text-center lg:w-1/2 bg-white/10 backdrop-blur-lg p-6 sm:p-10 md:p-12 rounded-3xl shadow-xl border border-blue-400/30"
+          > 
+            <GradientText 
+              colors={["#dbe8ff", "#aecdff", "#ff4d4d", "#dbe8ff", "#aecdff"]} 
+              animationSpeed={6} 
+              className="custom-class"
+            >
+              <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Let's Work</motion.h2>
+              <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 pb-2">Together!</motion.h2>
+            </GradientText>
             
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-    };
+            <motion.p className="text-blue-200 text-base sm:text-lg mb-6">
+              Turning ideas into stunning visuals, <br /> and coding experiences that truly excite!
+            </motion.p>
 
-    return (<>
-    <div className="bg-teal-100 py-7 md:py-8 lg:py-10 ">
-    <h2 className='mt-2 lg:mt-5 text-center font-body2 font-bold md:text-xl lg:text-2xl my-2 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600'>{text}<Cursor cursorColor='blue' /></h2>
-      <div className='flex m-auto lg:gap-14 mg:gap-10 gap-4 py-2 lg:py-4 w-[300px] md:w-[450px] lg:w-[610px] '>
-          <a data-aos="fade-left" href="https://www.linkedin.com/in/abdullah-al-hemel-1th/" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-4xl md:text-6xl lg:text-7xl text-[#0077b5]'><FaLinkedin /></a>
-          <a data-aos="fade-left" href="http://wa.me/+8801980076426" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-4xl md:text-6xl lg:text-7xl text-[#128c7e]'><IoLogoWhatsapp /></a>
-          <a data-aos="zoom-in" href="https://www.facebook.com/profile.php?id=100024754232380&mibextid=ZbWKwL" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-4xl md:text-6xl lg:text-7xl text-[#316FF6] '><FaFacebookSquare /></a>
-          <a data-aos="fade-right" href="https://github.com/AbdullahAlHemel" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-4xl md:text-6xl lg:text-7xl text-black '><FaGithub /></a>
-          <a data-aos="fade-right" href="#" className='hover:scale-125 duration-1000 ease-in-out hover:shadow-xl p-1 bg-white rounded text-4xl md:text-6xl lg:text-7xl text-[#0088cc]'><FaTelegram /></a>
-      </div>
-    </div>
-                {/* <h2 className=' text-center font-body2 font-bold text-2xl my-8'>Contract</h2> */}
-        <div class="mb-3 lg:mb-10 md:mt-6 mt-1 lg:mt-16 flex flex-col max-w-5xl m-auto lg:flex-row my-5 gap-1">
-          <ToastContainer position="top-left" autoClose={4000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
+            {/* Input Fields */}
+            <motion.div variants={staggerContainer}>
+              <motion.input className="w-full rounded-md p-3 sm:p-4 mb-4 sm:mb-5 text-white font-medium text-base sm:text-lg bg-white/10 border border-white/20 placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all" placeholder="Your Name" type="text" name="User_name" required />
+              <motion.input className="w-full rounded-md p-3 sm:p-4 mb-4 sm:mb-5 text-white font-medium text-base sm:text-lg bg-white/10 border border-white/20 placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all" placeholder="Email Address" type="email" name="User_email" required />
+              <motion.textarea className="w-full h-40 sm:h-48 p-3 sm:p-4 mb-4 sm:mb-5 text-white font-medium text-base sm:text-lg rounded-md bg-white/10 border border-white/20 placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all" placeholder="Message" name="message" required />
+            </motion.div>
 
-  <form  data-aos="fade-up" data-aos-duration="2000" ref={form} onSubmit={sendEmail} class="lg:w-1/2  bg-base-300 rounded-box m-6 md:m-0 p-8 md:p-10 lg:p-14">
-    <h2 className='text-2xl md:text-3xl lg:text-5xl font-body3 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600'>Let's Work </h2>
-    <h2 className='text-2xl md:text-3xl lg:text-5xl font-body3 font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-violet-500 lg:pb-2'>together!</h2>
-    <p className='text-md md:text-xl py-5  text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-violet-600  '>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
-    <div className=''>
-    <input className='w-full rounded-md my-2 p-2 font-medium px-4 text-lg' placeholder='Your Name' type="text" name="User_name" id="" />
-    <input className='w-full rounded-md my-2 p-2 font-medium px-4 text-lg' type="email" placeholder='Email Address' name="User_email" id="" />
-    </div>
-    <textarea className='w-full h-48 p-2 my-3 rounded font-medium px-4 text-lg tracking-wide' name="message" id="" placeholder='Message' cols="30" rows="10"></textarea>
-    <input onClick={notify} className=' hover:scale-105 hover:shadow-2xl hover:shadow-orange-300 hover:border btn text-white font-bold bg-gradient-to-r from-rose-400 to-violet-400 ' type="submit" name="" id="" value='Send Message' />
-  </form> 
- 
-  <div class="lg:w-1/2  p-10 lg:p-12 py-6 lg:py-52 ">
-  <h2 data-aos="fade-up-left" data-aos-duration="2000" className="text-transparent bg-clip-text bg-gradient-to-r from-black to-violet-600 flex place-items-center text-lg md:text-xl font-medium font-body4"><FaPhone className="bg-gradient-to-r from-rose-400 to-violet-500 w-11 h-11 p-2 rounded-full text-white mr-5 "/> <div className="grid"><h2 className="text-base border-b-2 w-16">Phone</h2>+880 19800 764 26</div></h2>
-  <h2 data-aos="fade-up-left" data-aos-duration="1000" className="text-transparent bg-clip-text bg-gradient-to-r from-black to-violet-600 flex place-items-center text-lg md:text-xl font-medium font-body4 my-5 md:my-12"><MdEmail className="bg-gradient-to-r from-rose-400 to-violet-500 w-11 h-11 p-2 rounded-full text-white mr-5 "/> <div className="grid"><h2 className="text-base border-b-2 w-14">Email</h2>abdullahalhemel100@gmail.com</div></h2>
-  <h2 data-aos="fade-up-left" data-aos-duration="500" className="text-transparent bg-clip-text bg-gradient-to-r from-black to-violet-600 flex place-items-center text-lg md:text-xl font-medium font-body4"><FaLocationDot className="bg-gradient-to-r from-rose-400 to-violet-500 w-12 h-11 p-2 rounded-full text-white mr-6 "/> <div className="grid"><h2 className="text-base border-b-2 w-20">Location</h2>52 no Nazimuddin road, Chankharpul, 1100, Dhaka</div></h2>
-  </div>
- </div>
-          
-        </>
-    );
+            <motion.input
+              type="submit"
+              value="Send Message"
+              className="w-full py-3 sm:py-4 rounded-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-white cursor-pointer shadow-lg hover:shadow-2xl transition-all"
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0, 200, 255, 0.5)" }}
+              whileTap={{ scale: 0.95 }}
+            />
+          </motion.form>
+
+          {/* Contact Info */}
+          <motion.div
+            variants={slideInRight}
+            initial="hidden"
+            animate={isVisible ? "show" : "hidden"}
+            className="lg:w-1/2 flex flex-col justify-center gap-6 sm:gap-8"
+          >
+            {contactInfo.map((info, index) => (
+              <motion.div key={index} variants={cardHover} whileHover="hover" className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/10 backdrop-blur-lg p-4 sm:p-6 rounded-3xl shadow-xl border border-white/10">
+                <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }} className="w-12 h-12 sm:w-14 sm:h-14 p-2 sm:p-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white flex items-center justify-center">
+                  {info.icon}
+                </motion.div>
+                <div className="text-center sm:text-left">
+                  <GradientText colors={["#dbe8ff", "#aecdff", "#ff4d4d", "#dbe8ff", "#aecdff"]} animationSpeed={6}>
+                    <h3 className="font-extrabold text-xl sm:text-2xl md:text-3xl">{info.title}</h3>
+                    <p className="text-sm sm:text-lg md:text-xl text-blue-100">{info.content}</p>
+                  </GradientText>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </Parallax>
+  );
 };
 
 export default Contract;

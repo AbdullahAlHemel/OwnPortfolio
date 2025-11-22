@@ -1,26 +1,61 @@
-import React from 'react';
-import { FaHome } from "react-icons/fa";
-import { MdAddLink } from "react-icons/md";
+import React from "react";
+import { FaHome, FaGithub, FaLinkedin } from "react-icons/fa";
 import { PiReadCvLogoFill } from "react-icons/pi";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import GradientText from '../../Home/Home/Banner/GradientText'
 
 const Footer = () => {
-    return (
-        < div  className=''>
-            <footer className="footer footer-center p-6 bg-base-300 text-base-content font-body4 font-medium tracking-widest">
-            <nav className='pt-1 lg:pt-5'>
-              <div class="grid grid-flow-col gap-6 md:gap-10 lg:gap-12 text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-violet-600">
-              <a to='/' href="/" className='text-sm font-bold uppercase text-center w-3/1 hover:scale-110 hover:text-black duration-300' ><FaHome className='text-2xl md:text-4xl lg:ml-2 text-stone-700 mb-2'/>Home</a>
-              <a href='https://www.linkedin.com/in/abdullah-al-hemel-1th/' className='text-sm font-bold uppercase text-center w-3/1 hover:scale-110 hover:text-black duration-300' ><MdAddLink className='text-2xl md:text-4xl lg:ml-4 text-stone-700 mb-2'/>Connect</a>
-              <a className='text-sm font-bold uppercase text-center w-3/1 hover:scale-110 hover:text-black duration-300' href="https://drive.google.com/file/d/1ZqeMKUnldoDOmP_pqEoxybwi9FyqW1Mq/view"><PiReadCvLogoFill className='text-2xl md:text-4xl lg:ml-5 mb-2 text-stone-700'/>View cv</a>
-              </div>
-            </nav> 
-              <aside className='lg:text-base text-xs'>
-                <p>Copyright © 2023 - All right reserved by <a href="" className=''>Abdullah Al Hemel</a></p>
-             </aside>
-           </footer>
-        </div>
-    );
+  return (
+    <footer className="w-full  bg-slate-900/80 backdrop-blur-xl px-6 py-10 text-white border-t border-white/10">
+
+      {/* Top Icon Section */}
+      <div className="flex justify-center gap-10 mb-6">
+        <Link
+          to="/"
+          className="flex flex-col items-center group transition transform hover:scale-110"
+        >
+         <GradientText colors={["#dbe8ff", "#aecdff", "#ff4d4d", "#dbe8ff", "#aecdff"]} animationSpeed={6} className="custom-class">
+            <FaHome className="text-3xl text-pink-400 group-hover:text-pink-300" />
+            <span className="text-sm mt-1 tracking-wider">Home</span>
+          </GradientText>
+        </Link>
+
+        <a
+          href="https://www.linkedin.com/in/abdullah-al-hemel-1th/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-col items-center group transition transform hover:scale-110"
+        >
+        <GradientText colors={["#dbe8ff", "#aecdff", "#ff4d4d", "#dbe8ff", "#aecdff"]} animationSpeed={6} className="custom-class">
+          <FaLinkedin className="text-3xl text-blue-400 group-hover:text-blue-300" />
+          <span className="text-sm mt-1 tracking-wider">LinkedIn</span>
+        </GradientText>
+        </a>
+
+
+        <a
+          href="https://drive.google.com/file/d/1ZqeMKUnldoDOmP_pqEoxybwi9FyqW1Mq/view"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-col items-center group transition transform hover:scale-110"
+        >
+        <GradientText colors={["#dbe8ff", "#aecdff", "#ff4d4d", "#dbe8ff", "#aecdff"]} animationSpeed={6} className="custom-class">
+          <PiReadCvLogoFill className="text-3xl text-violet-400 group-hover:text-violet-300" />
+          <span className="text-sm mt-1 tracking-wider">CV</span>
+        </GradientText>
+        </a>
+      </div>
+
+      {/* Divider Line */}
+      <div className="w-24 h-[2px] mx-auto bg-gradient-to-r from-pink-500 to-violet-500 rounded-full mb-6"></div>
+
+      {/* Copyright */}
+      <p className="text-center text-xs md:text-sm text-gray-300 tracking-wide">
+        © {new Date().getFullYear()} — All Rights Reserved |{" "}
+        <span className="text-pink-400 font-semibold">Abdullah Al Hemel</span>
+      </p>
+    </footer>
+  );
 };
 
 export default Footer;

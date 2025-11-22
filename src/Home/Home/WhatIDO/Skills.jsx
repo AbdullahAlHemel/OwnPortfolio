@@ -1,86 +1,73 @@
-import React from 'react';
-import SkillIconJava from '../../../../public/Skill_Icon/javascript.png'
-import SkillIconReact from '../../../../public/Skill_Icon/react.png'
-import SkillIconCss from '../../../../public/Skill_Icon/css.png'
-import SkillIconHtml from '../../../../public/Skill_Icon/html.png'
-import SkillIconTailwind from '../../../../public/Skill_Icon/Tailwind.png'
-import SkillIconFirebase from '../../../../public/Skill_Icon/firebase.svg'
-import SkillIconNodeJs from '../../../../public/Skill_Icon/js.png'
-import SkillIconMongo from '../../../../public/Skill_Icon/mongodb.svg'
-import SkillIconReactRouter from '../../../../public/Skill_Icon/react-router.svg'
-import Github from '../../../../public/Tools/github.png'
-import Figma from '../../../../public/Tools/Figma.png'
-import Git from '../../../../public/Tools/Git.png'
-import VsCode from '../../../../public/Tools/vsCode.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from "react";
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTailwindcss, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiFirebase, 
+  SiGit 
+} from "react-icons/si";
+
+const skills = [
+  // Frontend
+  { name: "React", icon: <SiReact className="text-blue-500" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+
+  // Backend
+  { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-800" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
+  { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+
+  // Tools
+  { name: "Git", icon: <SiGit className="text-red-500" /> },
+];
 
 const Skills = () => {
-    AOS.init({duration:1000})
-    return (
-        <div id='skill' data-aos="fade-up" className='max-w-7xl m-auto mb-10'>
-            <h2 className='uppercase text-center font-black text:md md:text-xl lg:text-2xl pt-4 lg:pt-12 font-Headline text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up">Skills</h2>
-
-         {/* Front-end */}
-           <div className='text-center lg:mt-8 text:md md:text-xl mt-6 lg:text-xl w-[90px] m-auto lg:pb-1.5 border-orange-200 border-b-2 rounded-md font-medium font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600 ' data-aos="fade-up">Front-End</div>
-
-         <div className='mx-auto w-[700px] pt-4 md:pt-8 lg:pt-14 pb-5 grid grid-cols-5 '>
-
-
-           <div  style={{transition:'0.5s'}} data-aos="flip-left"  className='hover:border-pink-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 pt-8 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-blue-300 hover:shadow-xl '><div className=''><img  className='' src={SkillIconTailwind} alt="" /></div></div> 
-           <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-pink-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-orange-300 hover:shadow-xl duration-500'><div className=''><img className='' src={SkillIconJava} alt="" /></div></div> 
-           <div style={{transition:'1s'}} data-aos="flip-left" className='border-cyan-300 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg shadow-cyan-300 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconReact} alt="" /></div></div> 
-           <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-red-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-sky-300 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconCss} alt="" /></div></div> 
-           <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-sky-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-orange-300 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconHtml} alt="" /></div></div> 
-
-            <div className='mx-auto w-[700px] grid grid-cols-5 mt-1.5  font-medium font-body3 tracking-[.03em]'>
-                <div className='lg:w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Tailwind</h3></div> 
-                <div className=' w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>JavaScript</h3></div> 
-                <div className='w-[70px] mx-auto font-medium'><h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>React</h3></div> 
-                <div className='w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>CSS</h3></div> 
-                <div className='w-[70px] mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Html</h3></div> 
+  return (
+    <div data-aos="fade-up" 
+     className="max-w-7xl m-auto overflow-hidden py-16 mt-3" style={{ 
+      background: 'linear-gradient(to right, #1A1A2E, #16213E, #0F3460, #533483)' 
+    }}>
+      <div className="flex animate-marquee gap-10">
+        {skills.concat(skills).map((skill, index) => (
+          <div
+            key={index}
+            style={{ 
+              background: 'linear-gradient(45deg, #483D8B, #87CEEB, #F0F8FF, #FAF0E6)' 
+            }}
+            className="flex flex-col items-center justify-center min-w-[120px] p-4 py-6 rounded-xl shadow-lg hover:shadow-[0_0_25px_rgba(147,51,234,0.6)] transition-all duration-300 hover:scale-110 group"
+          >
+            <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">
+              {skill.icon}
             </div>
-
+            <p className="font-semibold group-hover:text-white transition-colors duration-300">
+              {skill.name}
+            </p>
           </div>
-   
-    {/* Backend    */}
-    <div className='text-center lg:mt-8 text:md md:text-xl lg:text-xl w-[90px] m-auto lg:pb-1.5 border-orange-200 border-b-2 rounded-md font-medium font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up"  data-aos-duration="500">Back-End</div>
+        ))}
+      </div>
 
-    <div className='mx-auto w-[570px] pt-14 pb-5 grid grid-cols-4'>
-            
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-green-200 hover:bg-gradient-to-t from-pink-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-fuchsia-300 hover:shadow-xl duration-150'><div className=''><img className='w-[50px] ml-2' src={SkillIconFirebase} alt="" /></div></div> 
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-amber-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-emerald-200 hover:shadow-xl duration-150'><div className=''><img className='' src={SkillIconNodeJs} alt="" /></div></div> 
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='border-violet-300 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-violet-300 shadow-xl duration-150'><div className=''><img className='' src={SkillIconMongo} alt="" /></div></div> 
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-sky-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-orange-300 hover:shadow-xl duration-150 pt-[30px]'><div className=''><img className='' src={SkillIconReactRouter} alt="" /></div></div> 
-      
-             <div className='mx-auto w-[570px] grid grid-cols-4 mt-1.5  font-medium font-body3 tracking-[.03em]'>
-                 <div className='  mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Firebase</h3></div> 
-                 <div className=' mx-auto font-medium'><h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Express Js</h3></div> 
-                 <div className='mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>MongoDB</h3></div> 
-                 <div className=' mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>React Router</h3></div> 
-             </div>
-     </div>
-
-
-     {/* Tools */}
-     <div className='text-center lg:mt-8 text:md md:text-xl lg:text-xl w-[90px] m-auto lg:pb-1.5 border-orange-200 border-b-2 rounded-md font-medium font-body3 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-600' data-aos="fade-up"  data-aos-duration="500">Tools</div>
-
-    <div className='mx-auto w-[570px] pt-14 pb-5 grid grid-cols-4'>
-            
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-green-200 hover:bg-gradient-to-t from-pink-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-blue-300 hover:shadow-xl duration-150'><div className=''><img className='w-[50px] ml-2' src={Figma} alt="" /></div></div> 
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='border-teal-300 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg  shadow-emerald-200 shadow-xl duration-150'><div className=''><img className='' src={Github} alt="" /></div></div> 
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-red-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-sky-300 hover:shadow-xl duration-150'><div className=''><img className='' src={Git} alt="" /></div></div> 
-            <div style={{transition:'0.5s'}} data-aos="flip-left" className='hover:border-sky-200 hover:bg-gradient-to-t from-red-50 to-transparent w-[120px] px-6 py-5 mx-auto font-semibold border rounded-lg shadow-lg hover:shadow-red-300 hover:shadow-xl duration-150 pt-[30px]'><div className=''><img className='' src={VsCode} alt="" /></div></div> 
-      
-             <div className='mx-auto w-[570px] grid grid-cols-4 mt-1.5  font-medium font-body3 tracking-[.03em]'>
-                 <div className='  mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Figma</h3></div> 
-                 <div className=' mx-auto font-medium'><h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Github</h3></div> 
-                 <div className='mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>Git</h3></div> 
-                 <div className=' mx-auto font-medium'> <h3 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-violet-700'>VS Code</h3></div> 
-             </div>
-     </div>
-        </div>  
-    );    
+      <style jsx>{`
+        .animate-marquee {
+          display: flex;
+          gap: 2.5rem;
+          animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default Skills;
